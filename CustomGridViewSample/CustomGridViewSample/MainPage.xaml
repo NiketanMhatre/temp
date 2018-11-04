@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomGridViewSample"
+             xmlns:controls="clr-namespace:SqliteExample.Controls"
+             x:Class="CustomGridViewSample.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <ScrollView Orientation="Horizontal">
+            
+            <Grid x:Name="BedCategory" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    
+                </Grid.RowDefinitions>
+                <Label Grid.Column="1" Text="Number Of Items" Grid.Row="0" Grid.RowSpan="2" />
+                <Label Grid.Column="2" Text="Cost Items/Days (Rs.)" Grid.Row="0" Grid.RowSpan="2"/>
+                <Label Grid.Column="3" Text="Average Cost Items/Days (Rs.)" Grid.Row="0" Grid.RowSpan="2"/>
+                <Label Grid.Column="4" Text="Room Space (sq.ft.)" Grid.Row="0" Grid.RowSpan="2"/>
+                <Label Grid.Column="5" Text="Deposit @ admission" Grid.Row="0" Grid.RowSpan="2"/>
+
+                <controls:BedRow Grid.Row="2" Title="NICU" BedsQty="{Binding NICU.BedsQty}" BedCostPerDay="{Binding NICU.BedPerDay}" 
+                                         AvgBedCostPerDay="{Binding NICU.AvgBedPerDay}" BedSpace="{Binding NICU.BedSpace}" DepositAmount="{Binding NICU.DepositeAmount}" Grid.ColumnSpan="5"/>
+                <controls:BedRow Grid.Row="3" Title="Economy Ward (4 Bed)" BedsQty="{Binding EconomyWard.BedsQty}" BedCostPerDay="{Binding EconomyWard.BedPerDay}" 
+                                         AvgBedCostPerDay="{Binding EconomyWard.AvgBedPerDay}" BedSpace="{Binding EconomyWard.BedSpace}" DepositAmount="{Binding EconomyWard.DepositeAmount}" Grid.ColumnSpan="5"/>
+            </Grid>
+           
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

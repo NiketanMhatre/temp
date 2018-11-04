@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteExample.Controls.BedRow">
+            
+            <Label x:Name="BedNameLable" Grid.Column="0"/>
+            <Entry x:Name="BedsQtyEntry" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry x:Name="BedCostPerDayEntry" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry x:Name="AvgBedCostPerDayEntry" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry x:Name="BedSpaceEntry" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry x:Name="DepositAmountEntry" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center"/>
+</Grid>
